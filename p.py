@@ -1,11 +1,11 @@
 import os
 from datetime import datetime, date, timedelta
 
-
 c_date = datetime.today().date()
+
 l_date = date(2026, 12, 31)
 
-def datefolders(c_date, l_date):
+def datefolders(c, l):
     try:
         for i in range((l_date-c_date).days+1):
             new_day = c_date + timedelta(days=i)
@@ -14,6 +14,5 @@ def datefolders(c_date, l_date):
 
     except FileExistsError:
         print("Folders is already Created")
-
 
 datefolders(c_date,l_date)
