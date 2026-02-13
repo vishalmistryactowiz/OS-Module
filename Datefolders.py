@@ -1,9 +1,11 @@
 import os
 from datetime import datetime, date, timedelta
 
+user_date =input("Enter a Date YYYYMMDD:-")
 
-c_date = datetime.today().date()
-l_date = date(2026, 12, 31)
+c_date = datetime.strptime(user_date,"%Y-%m-%d").date()
+
+l_date = date(c_date.year, 12, 31)
 
 def datefolders(c_date, l_date):
     try:
